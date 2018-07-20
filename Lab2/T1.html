@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Đăng Ký</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="T1.css">
+    <script src="T1.js"></script>
+</head>
+<body>
+	<form method="post" action="">
+		<div class="FormTable">
+			<div class="FormRow">
+				<label class="RowText">Full name:</label>
+				<input class="RowInput" type="text" id="FullName"
+				onkeyup="javascript:NextInput(event, this, 'Address');"
+				onblur="javascript: this.value = Standard(this.value);">
+				<span class="Error" id="ErrorName"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Address</label>
+				<input class="RowInput" type="text" id="Address"
+				onkeyup="javascript:NextInput(event, this, 'SexMale');">
+				<span class="Error" id="ErrorAddress"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Giới tính:</label>
+				<input class="RowInput" type="radio" id="SexMale" checked="checked"
+				onkeyup="javascript:NextInput(event, this, 'SexFemale');">Male
+				<input class="RowInput" type="radio" id="SexFemale"
+				onkeyup="javascript:NextInput(event, this, 'BirthDay');">Female
+				<span class="Error" id="ErrorSex"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">BirthDay:</label>
+				<input class="RowInput" type="text" id="BirthDay"
+				value = "dd/mm/yyyy"
+				onkeydown="javascript:addTextBirthDay(event,'Email');"
+
+				onfocus="javascript:dobFocus();"
+				onblur="javascript:dobBlur();">
+				<span class="Error" id="ErrorBD"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Email:</label>
+				<input class="RowInput" type="text" id="Email"
+				onkeyup="javascript:NextInput(event, this, 'PhoneNumber');">
+				<span class="Error" id="ErrorEmail"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">PhoneNumber</label>
+				<input class="RowInput" type="text" id="PhoneNumber"
+				onkeyup="javascript:NextInput(event, this, 'ClassTA');">
+				<span class="Error" id="ErrorPhoneNumber"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Class</label>
+				<input class="RowInput" type="checkbox" id="ClassTA"
+				onkeyup="javascript:NextInput(event, this, 'ClassQT');">Tiếng Anh
+				<input class="RowInput" type="checkbox" id="ClassQT"
+				onkeyup="javascript:NextInput(event, this, 'ClassCNTT');">Quản Trị
+				<input class="RowInput" type="checkbox" id="ClassCNTT"
+				onkeyup="javascript:NextInput(event, this, 'UseName');">CNTT
+				<span class="Error" id="ErrorClass"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">UserName</label>
+				<input class="RowInput" type="text" id="UseName"
+				onkeyup="javascript:NextInput(event, this, 'Password');">
+				<span class="Error" id="UserName"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Password</label>
+				<input class="RowInput" type="text" id="Password"
+				onkeyup="javascript:NextInput(event, this, 'RePassword');">
+				<span class="Error" id="ErrorPassword"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">RePassword</label>
+				<input class="RowInput" type="text" id="RePassword"
+				onkeyup="javascript:NextInput(event, this, 'Note');">
+				<span class="Error" id="ErrorRePassword"></span><br>
+			</div>
+			<div class="FormRow">
+				<label class="RowText">Note</label>
+				<input class="RowInput" type="text" id="Note">
+				<span class="Error" id="ErrorNote"></span><br>
+			</div>
+		</div>
+	</form>
+</body>
+</html>

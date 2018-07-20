@@ -1,0 +1,29 @@
+html{
+
+}
+
+body{
+
+}
+
+.FormTable{
+
+}
+
+.FormRow{
+	padding-top: 20px;
+}
+
+.RowText{
+	font-size: 20px;
+	width: 200px;
+	float: left;
+}
+
+.RowInput{
+	font-size: 20px;
+}
+
+.Error{
+
+}
